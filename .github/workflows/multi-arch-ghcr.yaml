@@ -1,8 +1,9 @@
 name: Create and publish a Docker multi-arch image to ghcr
 
-on: ["push"]
-  branches:
-    - 'releases/**'
+on:
+  push:
+    tags:        
+      - v0.*
 
 env:
   REGISTRY: ghcr.io
